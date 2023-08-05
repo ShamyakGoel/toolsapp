@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+
+SITEMAP: https://inotes.tk/sitemap.xml

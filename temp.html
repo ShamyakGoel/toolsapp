@@ -1,0 +1,152 @@
+<!doctype html>
+                <html>
+                <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                h1{
+                    font-family: cursive;
+                    font-size: 30px;
+                }
+                p{
+                    font-family: cursive;
+                }
+                footer{
+                    font-size: larger;
+                    font-family: cursive;
+                }
+                </style>
+                </head>
+                <body>
+                <h1 class="text-3xl font-bold underline">
+                    Your account has been successfully created.
+                </h1>
+                <p>
+                Account details are as follows:-</p>
+                <p>Email : ${req.body.email}</p> 
+                <p>Password: Not shown for security purposes</p> 
+                <p>Explore 100+ Tools on our site.</p> 
+                <p>Home:- https://toolsapp.site</p> 
+                <p>Send a message:- https://toolsapp.site/message</p> 
+                <p>Create and save note:- https://toolsapp.site/notes</p> 
+                </p>
+                <br/>
+                <footer>
+                Thank you,<br/>
+                Toolsapp.site Team
+                </footer>
+                </body>
+                </html>
+
+                <!doctype html>
+                <html>
+                <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                    h1{
+                        font-family: cursive;
+                        font-size: 30px;
+                    }
+                    p{
+                        font-family: cursive;
+                    }
+                    footer{
+                        font-size: larger;
+                        font-family: cursive;
+                    }
+                    </style>
+                </head>
+                <body>
+                <h1>
+                    ToolsApp.site Request for Password Reset
+                </h1>
+                <p>
+                <p>We have recieved a request for your password Reset.</p>
+                <p>Your Password Reset url is: https://toolsapp.site/forgotc?id=${id}</p>
+                <p>If it is not you, then just ignore this mail</p>
+                </p>
+                <br/>
+                <footer>
+                Thank you,<br/>
+                Toolsapp.site Team
+                </footer>
+                </body>
+                </html>
+
+
+                Facebook signin
+                
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{api-version}'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
+check if user is loggedin 
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+reponse object 
+
+
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}
+
+
+status specifies the login status of the person using the app. The status can be one of the following:
+connected - the person is logged into Facebook, and has logged into your app.
+not_authorized - the person is logged into Facebook, but has not logged into your app.
+unknown - the person is not logged into Facebook, so you don't know if they've logged into your app or FB.logout() was called before and therefore, it cannot connect to Facebook.
+authResponse is included if the status is connected and is made up of the following:
+accessToken - contains an access token for the person using the app.
+expiresIn - indicates the UNIX time when the token expires and needs to be renewed.
+signedRequest - a signed parameter that contains information about the person using the app.
+userID - the ID of the person using the app.
+Once your app knows the login status of the person using it, it can do one of the following:
+If the person is logged into Facebook and your app, redirect them to your app's logged in experience.
+If the person isn't logged into your app, or isn't logged into Facebook, prompt them with the Login dialog with FB.login() or show them the Login Button.
+
+
+fb login button
+
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+
+check if login
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eveniet et tenetur numquam quis fugit temporibus molestias, nesciunt laboriosam voluptas dolores provident atque veritatis veniam? Quos laudantium recusandae, unde facilis ipsum architecto voluptatem accusamus repellendus molestiae voluptatibus itaque assumenda quibusdam iure eum laboriosam, natus ratione asperiores nostrum vero maxime nobis, eligendi cupiditate? Fuga delectus omnis sit nisi aspernatur, consequatur assumenda soluta commodi provident, ratione vel quod consectetur adipisci illo nostrum laboriosam, nesciunt rem recusandae blanditiis necessitatibus. Neque, nulla sunt sed accusamus deleniti delectus, ea incidunt, similique nihil voluptate autem dolores esse tempore laboriosam quo maxime non blanditiis consequuntur laborum excepturi dolorem reiciendis quis fuga fugiat. Rerum quaerat laudantium officia eos! Consequatur doloribus odio quod unde, quam ducimus alias exercitationem. Recusandae omnis ut nihil distinctio ipsam facere modi aliquid incidunt ea nobis temporibus quisquam repellendus, voluptatum earum? In, tenetur similique eum aperiam doloribus impedit nostrum vitae architecto doloremque ratione, consequuntur id adipisci excepturi optio accusantium debitis, minima natus alias facere assumenda eligendi laudantium velit quasi tempora! Deserunt, quidem ea fugiat hic blanditiis rerum dicta optio nam natus cum nemo assumenda, laudantium voluptatibus, magnam consequatur unde quos atque dolores sequi earum totam eos! Illo pariatur, quia saepe ullam sint deleniti explicabo. Amet rem quasi corrupti optio illo culpa iste placeat ad excepturi tempora itaque necessitatibus consequuntur maxime minima eum officiis, reprehenderit nam quaerat voluptate architecto voluptatum? Expedita minima at vero accusamus ad voluptas nobis deleniti, aspernatur ab, quidem modi eveniet sint mollitia fugiat impedit distinctio? Enim labore mollitia ullam aliquam quae beatae aspernatur quisquam dignissimos, doloremque et blanditiis omnis perspiciatis alias earum cupiditate accusamus possimus explicabo nobis odit ipsa nostrum sint expedita aperiam. Saepe placeat id itaque? Expedita at consectetur harum, possimus labore beatae necessitatibus voluptatem laboriosam quas fugiat autem sapiente natus recusandae similique assumenda ullam? Iure reprehenderit, accusamus ab nisi explicabo vel iste, deleniti esse modi impedit quam ullam veritatis consequatur laudantium vitae fugit tempore quos eos maiores aliquam debitis nam voluptatem asperiores quo? Rem quaerat, quia aperiam dignissimos fuga id eius quibusdam qui adipisci velit libero eligendi quae eaque doloribus possimus provident quas modi vero repellat accusamus rerum voluptates assumenda officia. Quis tempore distinctio ratione quae labore culpa aperiam, vitae, vero, fugiat tempora eaque voluptate repellat. Deserunt labore provident magnam asperiores dolore excepturi dolorum fugit possimus sit doloremque, nisi quod reiciendis exercitationem repudiandae aspernatur molestiae illum voluptates non libero temporibus officiis, ducimus quidem? Mollitia officia eligendi eveniet. Minima inventore, pariatur officia asperiores nulla reprehenderit praesentium fugit eius. Ex tempora optio eaque quam facere fuga saepe nesciunt unde dignissimos, nobis voluptates distinctio quidem reiciendis culpa at possimus eos quibusdam. Necessitatibus ut sit quaerat exercitationem, magnam voluptatum saepe maiores sunt eveniet itaque facilis magni recusandae non, similique suscipit vel, provident quas incidunt distinctio? Facilis odit consectetur id pariatur quasi exercitationem quod, rem eaque vel reprehenderit veritatis laborum ab sit libero ex provident eius hic architecto, mollitia vitae asperiores qui. Odit dicta, eum repellendus dolorem, nobis incidunt non placeat officiis velit blanditiis quia nam facere temporibus! Ipsum quos sed est animi qui veniam.
